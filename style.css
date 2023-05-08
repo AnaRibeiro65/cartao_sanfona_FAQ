@@ -1,0 +1,126 @@
+  *{
+    margin: 0;
+    height: 100%;
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Kumbh Sans', sans-serif;
+} 
+
+:root{
+    --cor_preto: hsl(238, 29%, 16%);
+    --cor_laranja:hsl(14, 88%, 65%);
+    --cor_roxo:hsl(273, 75%, 66%);
+    --cor_azul:hsl(240, 73%, 65%);
+    --cor_preto_claro:hsl(237, 12%, 33%);
+    --cor_cinza:hsl(240, 6%, 50%);
+    --cor_branco:hsl(240, 5%, 91%);
+    --cor_mis:hsl(273, 75%, 66%),hsl(240, 73%, 65%);
+}  
+
+body{
+    background-image: linear-gradient(
+        hsl(273, 75%, 66%),
+        hsl(240, 73%, 65%)
+    );
+}
+
+.principal{
+    background: var(--cor_branco);
+    width: 85rem;
+    height: 40rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#imag_des{
+    display: none;
+}
+
+.div_imag{
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    height: 76vh;
+    width: 46vw;
+    background-position: -30em -14em;
+}
+
+
+.imagem{
+    background-image: url(./images/illustration-woman-online-mobile.svg);
+    background-repeat: no-repeat;
+    height: 63vh;
+    width: 76vh;
+    background-position: -9em 2em;  
+    background-size: 40em; 
+} 
+
+.imag_pri{
+    position: absolute;
+}
+
+.imag_a{
+    position: absolute;
+    top: 13em;
+    right: 78em;
+    height: 18em;
+}
+
+@media screen and (max-width: 1440px){
+    .principal{
+        width: 75rem;
+        justify-content: center;
+    }
+    .imag_a{
+        right: 67em;
+    }
+    
+}
+
+
+@media screen and (max-width: 986px){
+    .principal{
+        flex-direction: column;
+        width: 43rem;
+        height: 51rem;
+        top: 67%;
+        border-radius: 1em;
+    }
+    .imagem{
+        width: 64vh;
+        background-position: 2em -9em;
+    }
+    .imag_a{
+        display: none;
+    }
+    .div_imag {
+        height: 21vh;
+    }
+    #imag_des{
+        display: block;
+        position: absolute;
+        height: 38vh;
+        top: -13em;
+        right: 5em;
+    }
+    .imagem{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .principal{
+        width: 18rem;
+        height: 48rem;
+        top: 80%;
+    }
+    #imag_des{
+        height: 26vh;
+        top: -6em;
+        right: 2.3em;
+    }
+}
